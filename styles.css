@@ -1,0 +1,65 @@
+/* Reset margin and padding for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Apply basic styling and flexbox layout to the body */
+body {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align children to the start of the page */
+    align-items: center; /* Center children horizontally */
+    min-height: 100vh; /* Minimum height of viewport */
+    padding: 20px; /* Padding around the entire content */
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+h1 {
+    margin: 20px 0; /* Add some margin to the top and bottom of the heading */
+}
+
+/* Style for the container holding the bars */
+#container {
+    width: 100%;
+    max-width: 600px; /* Maximum width of container */
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Center bars horizontally if there's extra space */
+    margin-bottom: 20px; /* Space below the container */
+    background-color: #ffffff; /* White background */
+    padding: 10px; /* Padding inside the container */
+    border: 1px solid #ddd; /* Light grey border */
+}
+
+/* Style for individual bars */
+.bar {
+    width: 10px; /* Width of bars */
+    background-color: #333; /* Dark grey color */
+    margin: 0 2px; /* Margin between bars */
+    min-height: 1px; /* Make sure there's at least a 1px bar for very small values */
+}
+
+
+/* Style for buttons */
+button {
+    padding: 10px 15px; /* Padding inside the buttons */
+    margin: 0 10px; /* Margin between buttons */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Slightly larger text */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Container for buttons to help with layout */
+.button-container {
+    margin-top: 20px; /* Space above the buttons */
+}
