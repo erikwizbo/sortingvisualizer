@@ -1,3 +1,31 @@
+/* Style for the header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and title */
+    width: 100%;
+    padding: 10px; /* Padding for aesthetic spacing */
+  }
+  
+  /* Style for the logo */
+  #logo {
+    height: 50px; /* Adjust as necessary */
+  }
+  
+  /* Container for the title to help with layout */
+  .title-container {
+    flex-grow: 1; /* Allows the title container to grow and fill available space */
+    display: flex;
+    justify-content: center; /* Center title horizontally */
+  }
+  
+  /* Style for the title */
+  h1 {
+    margin: 0; /* Remove margin to avoid offset */
+  }
+  
+  
+
 /* Reset margin and padding for all elements */
 *{
     margin: 0;
@@ -16,9 +44,6 @@ body {
     background-color: #f0f0f0; /* Light grey background */
 }
 
-h1 {
-    margin: 20px 0; /* Add some margin to the top and bottom of the heading */
-}
 
 /* Style for the container holding the bars */
 #container {
