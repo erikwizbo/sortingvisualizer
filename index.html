@@ -2,30 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Sorting Visualizer</title>
+  <title>WizSort Visualizer</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  
-  <header>
-    <img src="WizSort.webp" alt="Sorting Visualizer Logo" id="logo">
-    <div class="title-container">
-      <h1>Sorting Visualizer</h1>
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html">
+        <img src="WizSort.webp" alt="Sorting Visualizer Logo" class="logo">
+      </a>
+      <h1>WizSort Sorting Visualization</h1>
     </div>
   </header>
   
-  <h3>Bubble Sort</h3>
-  
-  <div id="container"></div>
+  <h1 class="main-heading">Sorting Algorithms</h1>
+  <nav class="algorithm-nav">
+    <a href="bubblesort.html" class="btn btn-primary" id="bubbleSortBtn">Bubble Sort</a>
+    <a href="mergesort.html" class="btn btn-primary" id="mergeSortBtn">Merge Sort</a>
+    <a href="insertion-sort.html" class="btn btn-primary" id="insertion-sortBtn">Insertion Sort</a>
+    <a href="heap-sort.html" class="btn btn-primary" id="heap-sortBtn">Heap Sort</a>
+  </nav>
 
-  <div class="button-container">
-      <button id="initButton">init</button>
-      <button id="playButton">play</button>
-  </div>
-  
+  <!-- Here you can add a paragraph or section for the description -->
+  <section class="description">
+    <p>This website is an educational resource, designed to help students and visualize different sorting algorithms to help understand their mechanisms. You can see how Bubble Sort, Merge Sort, Insertion Sort, and Merge Sort compare and swap elements to sort an array of numbers. In this resource, we will also discuss the important aspects of a sorting algorithm, including time complexity, space complexity, adaptability, and recursion.</p>
+  </section>
+
+  <!-- The rest of your content goes here -->
+
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
