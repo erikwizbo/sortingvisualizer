@@ -1,12 +1,12 @@
-const n = 15;
+let n = 15;
 let array = [];
 
-// Reference to the container
+//reference to the container
 const container = document.getElementById('container');
 
-// Generate an initial random array and display it as bars
+//generate an initial random array and display it as bars
 function init() {
-    array = []; // Reset the array
+    array = []; //reset the array
     for (let i = 0; i < n; i++) {
         array[i] = Math.random();
     }
@@ -16,7 +16,7 @@ function init() {
 
 function play() {
     const actions = bubbleSort([...array]); // Get the actions needed to sort the array
-    animate(actions, 0); // Start the animation with the first action
+    animate(actions, 0); //start the animation with the first action
 }
 
 function animate(actions, index) {
@@ -29,32 +29,32 @@ function animate(actions, index) {
         showBars(action.state, action.indices, 'red');
       }
   
-      // Use requestAnimationFrame to call the next step of the animation
+      //use requestAnimationFrame to call the next step of the animation
       requestAnimationFrame(() => {
         setTimeout(() => {
           animate(actions, index + 1);
-        }, 250);
+        }, 50);
       });
     } else {
-      // Once all swaps and comparisons are done, we start the final pass
+      //once all swaps and comparisons are done, we start the final pass
       highlightAllBarsGreen(actions[actions.length - 1].state);
     }
   }
   
 
-// Function to sequentially highlight each bar in green and keep it green
+//function to sequentially highlight each bar in green and keep it green once array is sorted
 function highlightAllBarsGreen(sortedArr) {
     let highlightedIndices = [];
 
     for (let i = 0; i < sortedArr.length; i++) {
         setTimeout(() => {
             highlightedIndices.push(i);
-            // Highlight all the bars that have been compared so far
+            //highlight all the bars that have been compared so far
             showBars(sortedArr, highlightedIndices, 'green');
-        }, i * 200);
+        }, i * 100);
     }
 
-    // After the last comparison, ensure the entire array is highlighted in green
+    //after the last comparison, ensure the entire array is highlighted in green
     setTimeout(() => {
         showBars(sortedArr, sortedArr.map((_, idx) => idx), 'green');
     }, (sortedArr.length - 1) * 100);
@@ -68,16 +68,16 @@ function bubbleSort(arr) {
     do {
         swapped = false;
         for (let i = 1; i < n; i++) {
-            // Record the comparison
+            //record the comparison using a copy of the array
             actions.push({ type: 'compare', indices: [i - 1, i], state: [...arr] });
 
             if (arr[i - 1] > arr[i]) {
-                // Swap the elements in the array
+                //swap the elements in the array
                 let temp = arr[i - 1];
                 arr[i - 1] = arr[i];
                 arr[i] = temp;
 
-                // Record the swap
+                //record the swap
                 actions.push({ type: 'swap', indices: [i - 1, i], state: [...arr] });
                 swapped = true;
             }
@@ -85,14 +85,14 @@ function bubbleSort(arr) {
         n--;
     } while (swapped);
 
-    // Do not forget to add the sorted state as the last action
+    //sorted state 
     actions.push({ type: 'sorted', state: [...arr] });
 
     return actions;
 }
 
 
-// Modify the showBars function to update bars instead of recreating them
+//modify the showBars function to update bars instead of recreating them
 function showBars(arr, highlightIndices = [], highlightColor = "") {
     // If the bars have not been created yet, create them.
     if (container.children.length === 0) {
@@ -107,7 +107,7 @@ function showBars(arr, highlightIndices = [], highlightColor = "") {
     // Update existing bars
     arr.forEach((value, index) => {
         const bar = container.children[index];
-        bar.style.height = value * 200 + "px"; // Update the height of the bar
+        bar.style.height = value * 200 + "px"; // update the height of the bar
 
         // Reset the color of all bars
         bar.style.backgroundColor = '';
@@ -132,4 +132,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     init(); // Initialize the first set of bars
 });
+
 
