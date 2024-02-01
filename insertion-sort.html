@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  
+    <header class="site-header">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="WizSort.webp" alt="Sorting Visualizer Logo" class="logo">
+              </a>
+              
+          <h1>WizSort Sorting Visualization</h1>
+          <!-- Navigation container added -->
+          <nav class="header-nav">
+            <a href="insertion-sort.html" class="btn btn-primary" id="insertionSortBtn">Insertion Sort</a>
+          </nav>
+        </div>
+      </header>
+      
+  
+  <main>
+    <section class="visualizer">
+      <h2 id="algorithm-title">Insertion Sort</h2>
+      <div id="container"></div>
+      <div class="button-container">
+          <button id="initButton">init</button>
+          <button id="playButton">play</button>
+      </div>
+    </section>
+
+    <section class="description">
+      <h3>Description</h3>
+      <p>Hi everyone! My name is Erik, and today we'll be discussing one of my favorite sorting algorithms, bubble sort. It is one of my favorites because of its simplicity, as well as it being visually pleasing.</p>
+      <p>Bubble sort is an iterative sorting algorithm that imitates the movement of bubbles in sparkling water. The "bubbles" represent the elements in the array. It iterates through the data structure and for each cycle compares the current element with the next one, swapping them if they are in the wrong order.</p>
+      <ul>
+        <li>After the first pass of bubble sort, the largest bubble is guaranteed to be sorted in the back of the list.</li>
+        <li>After the second pass, the second largest bubble is guaranteed to be sorted in the back of the list.</li>
+        <li>And so on...</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="insertion-sort.js"></script>
+</body>
+</html>
+
