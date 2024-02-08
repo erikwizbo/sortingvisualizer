@@ -15,10 +15,9 @@
                 <img src="WizSort.webp" alt="Sorting Visualizer Logo" class="logo">
               </a>
               
-          <h1>WizSort Sorting Visualization</h1>
+          <h1>WizSort Sorting</h1>
           <!-- Navigation container added -->
           <nav class="header-nav">
-            <a href="heap-sort.html" class="btn btn-primary" id="heapSortBtn">Heap Sort</a>
           </nav>
         </div>
       </header>
@@ -36,16 +35,23 @@
 
     <section class="description">
       <h3>Description</h3>
-      <p>Hi everyone! My name is Erik, and today we'll be discussing one of my favorite sorting algorithms, bubble sort. It is one of my favorites because of its simplicity, as well as it being visually pleasing.</p>
-      <p>Bubble sort is an iterative sorting algorithm that imitates the movement of bubbles in sparkling water. The "bubbles" represent the elements in the array. It iterates through the data structure and for each cycle compares the current element with the next one, swapping them if they are in the wrong order.</p>
-      <ul>
-        <li>After the first pass of bubble sort, the largest bubble is guaranteed to be sorted in the back of the list.</li>
-        <li>After the second pass, the second largest bubble is guaranteed to be sorted in the back of the list.</li>
-        <li>And so on...</li>
-      </ul>
+    <p>Heap Sort is an efficient sorting algorithm that leverages a binary heap data structure. Known for its effectiveness in dealing with large datasets, it sorts elements in O(n log n) time by organizing the data into a heap and then repeatedly removing the root element.</p>
+    <ul>
+      <li><strong>How It Works:</strong> The algorithm constructs a heap from the data and then sorts the array by continuously removing the root of the heap and restructuring the remaining elements.</li>
+      <li><strong>Time Complexity:</strong> Consistently O(n log n) across all cases, making it highly efficient, especially for large datasets.</li>
+      <li><strong>Usage Scenarios:</strong> Best suited for large datasets and situations where memory efficiency is crucial, as it requires minimal additional space.</li>
+      <li><strong>Advantages and Disadvantages:</strong> Offers consistent performance and low memory usage but can be complex to implement and may be slower for smaller datasets due to its constant factors.</li>
+    </ul>
     </section>
   </main>
 
   <script src="heap-sort.js"></script>
+  <h1 class="main-heading">Other Sorting Algorithms</h1>
+  <nav class="algorithm-nav">
+    <a href="bubblesort.html" class="btn btn-primary" id="bubbleSortBtn">Bubble Sort</a>
+    <a href="selectionsort.html" class="btn btn-primary" id="mergeSortBtn">Selection Sort</a>
+    <a href="insertion-sort.html" class="btn btn-primary" id="insertion-sortBtn">Insertion Sort</a>
+  </nav>
+
 </body>
 </html>
