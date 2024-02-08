@@ -15,10 +15,9 @@
                 <img src="WizSort.webp" alt="Sorting Visualizer Logo" class="logo">
               </a>
               
-          <h1>WizSort Sorting Visualization</h1>
+          <h1>WizSort Sorting</h1>
           <!-- Navigation container added -->
           <nav class="header-nav">
-            <a href="bubble-sort.html" class="btn btn-primary" id="bubbleSortBtn">Bubble Sort</a>
           </nav>
         </div>
       </header>
@@ -36,16 +35,24 @@
 
     <section class="description">
       <h3>Description</h3>
-      <p>Hi everyone! My name is Erik, and today we'll be discussing one of my favorite sorting algorithms, bubble sort. It is one of my favorites because of its simplicity, as well as it being visually pleasing.</p>
-      <p>Bubble sort is an iterative sorting algorithm that imitates the movement of bubbles in sparkling water. The "bubbles" represent the elements in the array. It iterates through the data structure and for each cycle compares the current element with the next one, swapping them if they are in the wrong order.</p>
+      <p>Bubble Sort is a comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. This process is repeated until no more swaps are needed, which means the list is sorted. The algorithm gets its name because smaller elements "bubble" to the top of the list (beginning of the array) with each iteration.</p>
+      <p>This algorithm performs its task by iterating over a list, comparing adjacent elements, and swapping them if they are not in the correct order. The process continues until the list is sorted, with larger elements "bubbling" to the end of the list with each iteration.</p>
       <ul>
-        <li>After the first pass of bubble sort, the largest bubble is guaranteed to be sorted in the back of the list.</li>
-        <li>After the second pass, the second largest bubble is guaranteed to be sorted in the back of the list.</li>
-        <li>And so on...</li>
+        <li><strong>How It Works:</strong> Starting at the beginning of the list, each pair of adjacent elements is compared and swapped if necessary. This process is repeated for the entire list, causing larger elements to bubble to the end of the list.</li>
+        <li><strong>Time Complexity:</strong> Best Case - O(n), Average and Worst Case - O(n²). The efficiency decreases as the size of the list increases.</li>
+        <li><strong>Usage Scenarios:</strong> Primarily used for educational purposes and for sorting small datasets where simplicity is preferred over efficiency.</li>
+        <li><strong>Advantages and Disadvantages:</strong> While it is simple to understand and implement, and efficient for small lists, it is inefficient for larger lists with a significant number of elements.</li>
       </ul>
     </section>
   </main>
 
   <script src="script.js"></script>
+  <h1 class="main-heading">Other Sorting Algorithms</h1>
+  <nav class="algorithm-nav">
+    <a href="selectionsort.html" class="btn btn-primary" id="mergeSortBtn">Selection Sort</a>
+    <a href="insertion-sort.html" class="btn btn-primary" id="insertion-sortBtn">Insertion Sort</a>
+    <a href="heap-sort.html" class="btn btn-primary" id="heap-sortBtn">Heap Sort</a>
+  </nav>
+
 </body>
 </html>
