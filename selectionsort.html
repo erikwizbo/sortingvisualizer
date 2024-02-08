@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  
+    <header class="site-header">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="WizSort.webp" alt="Sorting Visualizer Logo" class="logo">
+              </a>
+              
+          <h1>WizSort Sorting</h1>
+          <!-- Navigation container added -->
+          <nav class="header-nav">
+          </nav>
+        </div>
+      </header>
+      
+  
+  <main>
+    <section class="visualizer">
+      <h2 id="algorithm-title">Selection Sort</h2>
+      <div id="container"></div>
+      <div class="button-container">
+          <button id="initButton">init</button>
+          <button id="playButton">play</button>
+      </div>
+    </section>
+
+    <section class="description">
+      <h3>Description</h3>
+      <p>Selection Sort is a fundamental and straightforward sorting algorithm used extensively in computer science education to introduce sorting concepts. It operates by repeatedly selecting the smallest or largest element from the unsorted part of the list and moving it to the sorted section.</p>
+      <ul>
+        <li><strong>How It Works:</strong> The algorithm searches for the smallest (or largest) element in the unsorted section and swaps it with the first unsorted element, progressively sorting the list.</li>
+        <li><strong>Time Complexity:</strong> Regardless of the list's initial state, Selection Sort always has a time complexity of O(n²), making it less efficient for larger datasets.</li>
+        <li><strong>Usage Scenarios:</strong> It's primarily used for educational purposes and small datasets where simplicity is more critical than efficiency.</li>
+        <li><strong>Advantages and Disadvantages:</strong> Easy to understand and implement, does not require additional memory. However, it is inefficient for large datasets and outperformed by more complex algorithms.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="selectionsort.js"></script>
+  <h1 class="main-heading">Other Sorting Algorithms</h1>
+  <nav class="algorithm-nav">
+    <a href="bubblesort.html" class="btn btn-primary" id="bubbleSortBtn">Bubble Sort</a>
+    <a href="insertion-sort.html" class="btn btn-primary" id="insertion-sortBtn">Insertion Sort</a>
+    <a href="heap-sort.html" class="btn btn-primary" id="heap-sortBtn">Heap Sort</a>
+  </nav>
+
+</body>
+</html>
