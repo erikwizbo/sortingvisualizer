@@ -25,7 +25,7 @@
   
   <main>
     <section class="visualizer">
-      <h2 id="algorithm-title">Selection Sort</h2>
+      <h2 id="algorithm-title">Insertion Sort</h2>
       <div id="container"></div>
       <div class="button-container">
           <button id="initButton">init</button>
@@ -35,24 +35,23 @@
 
     <section class="description">
       <h3>Description</h3>
-      <p>Selection Sort is a fundamental and straightforward sorting algorithm used extensively in computer science education to introduce sorting concepts. It operates by repeatedly selecting the smallest or largest element from the unsorted part of the list and moving it to the sorted section.</p>
+      <p>Insertion Sort is a simple yet effective sorting algorithm that is widely used in computer science education to teach sorting fundamentals. It builds the final sorted array one item at a time, making it efficient for small datasets and partially sorted arrays.</p>
       <ul>
-        <li><strong>How It Works:</strong> The algorithm searches for the smallest (or largest) element in the unsorted section and swaps it with the first unsorted element, progressively sorting the list.</li>
-        <li><strong>Time Complexity:</strong> Regardless of the list's initial state, Selection Sort always has a time complexity of O(n²), making it less efficient for larger datasets.</li>
-        <li><strong>Usage Scenarios:</strong> It's primarily used for educational purposes and small datasets where simplicity is more critical than efficiency.</li>
-        <li><strong>Advantages and Disadvantages:</strong> Easy to understand and implement, does not require additional memory. However, it is inefficient for large datasets and outperformed by more complex algorithms.</li>
+        <li><strong>How It Works:</strong> The algorithm iteratively takes one element from the unsorted portion and inserts it into its correct position in the sorted portion.</li>
+        <li><strong>Time Complexity:</strong> Best Case - O(n), Average and Worst Case - O(n²). The efficiency is highest when the data is nearly sorted or the dataset is small.</li>
+        <li><strong>Usage Scenarios:</strong> Ideal for situations where simplicity is key or when dealing with small to moderately sized datasets. It's also efficient for nearly sorted data.</li>
+        <li><strong>Advantages and Disadvantages:</strong> Advantages include ease of implementation and efficiency on small or nearly sorted datasets. However, it becomes inefficient as the size of the dataset grows.</li>
       </ul>
     </section>
   </main>
 
-  <script src="selectionsort.js"></script>
+  <script src="insertion-sort.js"></script>
   <h1 class="main-heading">Other Sorting Algorithms</h1>
   <nav class="algorithm-nav">
     <a href="bubblesort.html" class="btn btn-primary" id="bubbleSortBtn">Bubble Sort</a>
-    <a href="insertion-sort.html" class="btn btn-primary" id="insertion-sortBtn">Insertion Sort</a>
+    <a href="selectionsort.html" class="btn btn-primary" id="mergeSortBtn">Selection Sort</a>
     <a href="heap-sort.html" class="btn btn-primary" id="heap-sortBtn">Heap Sort</a>
   </nav>
-
 </body>
 </html>
 
